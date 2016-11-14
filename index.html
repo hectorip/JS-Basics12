@@ -8,18 +8,42 @@
   <h1> Tipos de Datos en JS </h1>
 
   <script>
-    var nac = prompt("¿En qué año naciste?");
-    var actual = prompt("¿Qué año es?");
+    // var nac = prompt("¿En qué año naciste?");
+    // var actual = prompt("¿Qué año es?");
+    //
+    //
+    // // var casado = false;
+    // /*
+    //   Esto es un comentario.
+    // */
+    // var muerte = prompt("¿A qué edad crees morir?");
+    // var tacos = prompt("¿Cuántos tacos por día?");
+    //
+    // var edad = actual - nac;
+    // var restantes = muerte - edad;
+    // alert("Te comerás: " + ( restantes * 365 * tacos ));
+    //
+    //
+    // var tacos_totales = (muerte - (actual - nac)) * 365 * tacos;
+    var edad = prompt("¿Qué edad tienes?");
+    var pais = prompt("¿En qué país?");
 
+    // US 21
+    // MX 18
+    // GB 16
 
-    // var casado = false;
-    /*
-      Esto es un comentario.
-    */
-
-    alert("Tienes " + (actual - nac));
-
-
+    var edad_nec;
+    if(pais == "MX") {
+      edad_nec = 18;
+    }
+    if (pais == "US") {
+      edad_nec = 21;
+    }
+    if (edad > edad_nec) {
+      alert("Puedes entrar al antro.");
+    } else {
+      alert("Regrésate a tu casa");
+    }
 
     /* 3 tacos por día -> life supply */
     /* Cuántos tacos voy a comerme hasta que me muera */
