@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checador de Edad</title>
+</head>
+
+<body>
+    <h1> Checador de Edad</h1>
+    <div id="formulario">
+        <input type="text" id="edad" name="edad">
+        <input type="text" id="nombre" name="nombre">
+
+        <select name="pais" id="pais">
+      <option value="MX">México</option>
+      <option value="US">Estados Unidos</option>
+      <option value="CU">Cuba</option>
+    </select>
+
+        <button onclick="validar();"> Verificar </button>
+        <button onclick="activar_saludar();"> Saludar </button>
+
+        <button onclick="encontrar_hobbits();"> Encontrar hobbits </button>
+
+
+        <div id="mensaje"></div>
+
+        <ul>
+          <li class="hobbit"> Bilbo </li>
+          <li class="hobbit"> Frodo </li>
+          <li class="hobbit"> Sam </li>
+        </ul>
+
+    </div>
+    <script>
+        function validar() {
+            var edad = document.getElementById("edad").value;
+            var pais = document.querySelector("#pais").value;
+            var edad_reglamentaria;
+
+            // Tiene que ser un número
+            // Límite superior
+            // Límite inferior
+            // console.log(edad + 1);
+            edad = parseInt(edad);
+            if (isNaN(edad) || (edad >= 130) || (edad <= 5)) {
+                alert("Pon una edad válida.");
+                return;
+            }
+
+            if (pais == "MX") {
+                edad_reglamentaria = 18;
+            } else if (pais == "US") {
+                edad_reglamentaria = 21;
+            } else if (pais == "CU") {
+                edad_reglamentaria = 16;
+            } else {
+                alert("NO te pases de listo");
+                return;
+            }
+            if (edad >= edad_reglamentaria) {
+                document.querySelector("#mensaje").innerHTML = "Felicidades! eres mayor de edad";
+            } else {
+                document.querySelector("#mensaje").innerHTML = "Regrésate a tu casa";
+            }
+        }
+
+        function saludar(nombre) {
+            alert("Hola " + nombre);
+        }
+
+        function activar_saludar() {
+            var nombre = document.querySelector("#nombre").value;
+            saludar(nombre);
+        }
+
+
+      function encontrar_hobbits(){
+        hobbits = document.querySelectorAll(".hobbit");
+        console.log(hobbits);
+        // colecciones JS
+      }
+
+    </script>
+</body>
+
+</html>

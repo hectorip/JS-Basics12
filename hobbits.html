@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hobbits</title>
+</head>
+<body>
+  <h1> Hobbits </h1>
+  <ul>
+    <li class="hobbit">Bilbo</li>
+    <li class="hobbit">Frodo</li>
+    <li class="hobbit">Sam</li>
+    <li class="hobbit">Sam 2</li>
+  </ul>
+  <button onclick="encontrar_hobbits()">Encontrar Hobbits</button>
+
+  <script>
+    function encontrar_hobbits(){
+      hobbits = document.querySelectorAll(".hobbit");
+      console.log(hobbits);
+    }
+  </script>
+</body>
+</html>
